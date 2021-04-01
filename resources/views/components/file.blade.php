@@ -46,7 +46,7 @@
                 </div>
                 <div class="overlay-layer">
                     @if(gettype($this->{$component->name}) == 'string')
-                    <a wire:loading.attr="disabled" type="button" class="btn font-weight-bold btn-danger btn-shadow">Eliminar</a>
+                    <a wire:loading.attr="disabled" type="button" wire:click="$set('{{$component->name}}', '')" class="btn font-weight-bold btn-danger btn-shadow">Eliminar</a>
                     @else
                     <a wire:loading.attr="disabled" type="button" x-on:click.prevent="$wire.removeUpload('{{ $component->name }}', '{{ $this->{$component->name}->getFilename() }}')" class="btn font-weight-bold btn-danger btn-shadow">Eliminar</a>
                     @endif
