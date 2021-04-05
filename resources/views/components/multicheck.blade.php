@@ -9,4 +9,5 @@
         </label>
         @endforeach
     </div>
+    @error('{{ component->name }}') <div class="invalid-feedback" style="display:block !important;">{{ $message }}</div> @enderror
 </div>
