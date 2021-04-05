@@ -1,9 +1,7 @@
-<div>
-    <label class="form-label">{{ $component->label }}</label>
-    <span class="switch switch-icon">
-        <label>
-            <input type="checkbox" {{ $this->{$component->name} ? 'checked' : '' }} />
-            <span wire:click="check"></span>
-        </label>
-    </span>
+<div class="checkbox-list">
+    <label class="checkbox">
+        <input type="checkbox" wire:model.defer="{{ $component->name}}" />
+        <span></span>
+        {{ $component->label }}
+    </label>
 </div>
